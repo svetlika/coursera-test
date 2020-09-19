@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app='LunchChecker'>
+  <head>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+      .message span {display:inline-block;padding:5px 10px;}
+      .clr-none {color:inherit; border:2px solid transparent;}
+      .clr-red {color:red; border:2px solid red;}
+      .clr-green {color:green; border:2px solid green;}
+    </style>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+<body>
+   <div class="container" ng-controller='LCController'>
+     <h1><A href="../index.html">Course</a> / Lunch Checker</h1>
+     <h3>This is my solution for an assigment for Module 1 of this course at Coursera.</h3>
+     <p>I'm not sure that I understand properly what does mean "textbox" in the bonus section.</p>
+     <p>Also I implemented both logic of counting items - if you want to ignore empty items like ", , ," you can do it with selecting of the checkbox.</p>
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             placeholder="list comma separated dishes you usually have for lunch"
+             class="form-control"
+             ng-model="lunchMenu">
+         </div>
+         <div class="form-group form-check">
+           <input type="checkbox" class="form-check-input" id="exampleCheck1" ng-model='flag'>
+           <label class="form-check-label" for="exampleCheck1">Please, don't count empty items.</label>
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="defineVerdict();">Check If Too Much</button>
+         </div>
+
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+           <span class="{{msgColor}}">{{verdict}}</span>
+         </div>
+   </div>
+
+</body>
+</html>
