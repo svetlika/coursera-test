@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="NarrowItDownApp">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+<body>
+   <div class="container" ng-controller="NarrowItDownController as myctrl">
+    <h1><A href="../index.html">Course</a> / Narrow Down Your Chinese Menu Choice</h1>
+    <p>My service is searching not only in the description of the menu item, but looking into the name property as well.</p>
+    <p>Also it displays different messages about empty list of the found items. It depends on user actions.</p>
+    <p>I'm not sure that I implemented this logic about messages in right place, but it works fine.</p>
+    <div class="row">
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="text" placeholder="search term" class="form-control" ng-model="myctrl.searchString">
+        </div>
+        <div class="form-group narrow-button">
+          <button class="btn btn-primary" ng-click="myctrl.getMenuItems();">Narrow It Down For Me!</button>
+        </div>
+      </form>
+    </div>
+    <!-- found-items should be implemented as a component -->
+    <div class="row">
+      <found-items
+        found-items="myctrl.found"
+        msg-text="myctrl.msgText"
+        msg-class="myctrl.msgClass"
+        on-remove="myctrl.removeItem(index)"></found-items>
+    </div>
+  </div>
+
+</body>
+</html>
