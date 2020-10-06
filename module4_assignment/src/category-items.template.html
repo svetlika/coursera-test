@@ -1,9 +1,7 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <a ui-sref="home">Home</a> | <a ui-sref="categories">Categories</a> | Items
+  <div class="panel-heading bg-primary">
+    <a ui-sref="home" style="color:inherit;">Home</a> | <a ui-sref="categories" style="color:inherit;">Categories</a> | Items
   </div>
   <div class="panel-body">
     <h2><mark>{{category.categoryData.category.name}}</mark> category items:</h2>
     <items-list items="category.categoryData.menu_items"></items-list>
   </div>
-</div>

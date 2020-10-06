@@ -1,0 +1,47 @@
+#main-content {
+  height:100vh;
+  overflow:hidden;
+}
+
+#main-title {
+  max-height:10vh;
+  overflow: hidden;
+}
+
+#app-content {
+  max-height:90vh;
+  overflow:hidden;
+}
+
+#app-content .panel-heading {
+  height:5vh;
+  overflow:hidden;
+}
+
+#app-content .panel-body {
+  height:80vh;
+  overflow:auto;
+}
+
+#app-content .panel-footer {
+  height:5vh;
+  overflow:hidden;
+}
+
+#double_lists {
+  height:76vh;
+  overflow:hidden;
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+#double_lists > div {
+  height:76vh;
+  overflow:auto;
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+}

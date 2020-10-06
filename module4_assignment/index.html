@@ -18,11 +18,14 @@
 
   </head>
   <body>
-
-    <h1><A href="../index.html">Course</a> / My Menu App</h1>
-
     <div id="main-content" class="container">
-      <ui-view></ui-view>
+      <h1 id="main-title"><A href="../index.html">Course</a> / My Menu App</h1>
+      <div id="app-content" class="panel panel-default">
+        <ui-view></ui-view>
+
+        <div class="panel-footer">
+        </div>
+      </div>
     </div>
 
     <!-- Libraries -->

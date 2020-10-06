@@ -1,7 +1,7 @@
-<ul class="list-unstyled">
-  <li ng-repeat="myCategory in $ctrl.categories" >
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="myCategory in $ctrl.categories" >
         <mark>{{myCategory.short_name}}</mark>
          {{myCategory.name}}
-        <button type="button" class="btn btn-info btn-sm" ui-sref="category.items({categoryId: myCategory.short_name, categoryIndex: $index})" >Items</button>
+        <button type="button" class="btn btn-info btn-sm pull-right" ui-sref="category.items({categoryId: myCategory.short_name, categoryIndex: $index})" >Items</button>
   </li>
 </ul>
