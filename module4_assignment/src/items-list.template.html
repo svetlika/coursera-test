@@ -1,0 +1,11 @@
+<ul class="list-unstyled">
+  <li ng-repeat="item in $ctrl.items">
+    <blockquote>
+      <p><mark>{{item.short_name}}</mark> {{item.name}} </p>
+      <footer>
+        {{item.description}}
+      </footer>
+      <p>$ {{item.price_large}}</p>
+    </blockquote>
+  </li>
+</ul>
