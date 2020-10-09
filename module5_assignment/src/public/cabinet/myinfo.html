@@ -1,0 +1,32 @@
+<div id="main-content" class="container">
+
+  <div class="col-xs-12 col-sm-8 col-md-6" ng-if="!myInfoCtrl.user.registered">
+    <h2>We are terrible sorry!</h2>
+    <p>Not Signed Up Yet.</p>
+    <p><a ui-sref="public.signup" class="btn btn-default">Sign up Now!</a></p>
+  </div>
+
+  <div ng-if="myInfoCtrl.user.registered" class="col-xs-12">
+    <h2>Hi {{myInfoCtrl.user.FirstName}} {{myInfoCtrl.user.LastName}}!</h2>
+    <p><em>We store your data in our App:</em></p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li>First Name: <strong>{{myInfoCtrl.user.FirstName}}</strong></li>
+          <li>Last Name: <strong>{{myInfoCtrl.user.LastName}}</strong></li>
+          <li>Email: <strong>{{myInfoCtrl.user.Email}}</strong></li>
+          <li>Phone: <strong>+7 {{myInfoCtrl.user.Phone}}</strong></li>
+          <li>Favourite Dish: <strong>{{myInfoCtrl.user.Dish}}</strong></li>
+        </ul>
+      </div>
+
+      <p><em>Detailed info about your favourite dish:</em></p>
+
+      <menu-item menu-item="myInfoCtrl.dish">
+      </menu-item>
+    </div>
+
+
+  </div>
+</div>
